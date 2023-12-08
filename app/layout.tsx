@@ -1,5 +1,6 @@
 import "@/styles/globals.css"
 import { Metadata } from "next"
+import { Analytics } from '@vercel/analytics/react';
 import { GeistSans } from "geist/font"
 
 import { siteConfig } from "@/config/site"
@@ -36,6 +37,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         </div>
         <Hello />
         <Footer />
+        <Analytics />
       </body>
     </html>
   )
