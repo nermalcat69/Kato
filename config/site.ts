@@ -2,7 +2,7 @@ export type SiteConfig = typeof siteConfig
 
 export const siteConfig = {
   name: "Nermalcat69",
-  description: "Template for your projects :)",
+  description: "One Place for your algebra questions :)",
   mainNav: [
     {
       title: "Kato",
