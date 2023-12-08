@@ -5,7 +5,7 @@ import { siteConfig } from "@/config/site"
 
 export function Footer() {
   return (
-    <header className="bg-background fixed bottom-0 z-40 w-full mt-auto border-t">
+    <footer className="bg-background fixed bottom-0 z-40 w-full mt-auto border-t">
       <div className="container flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0">
         <span className="text-gray-800">
           Powered by{" "}
@@ -30,6 +30,6 @@ export function Footer() {
           </nav>
         </div>
       </div>
-    </header>
+    </footer>
   )
 }
