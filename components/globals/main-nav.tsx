@@ -12,7 +12,7 @@ interface MainNavProps {
 export function MainNav({ items }: MainNavProps) {
   return (
     <div className="flex items-center gap-4 md:gap-2">
-      <Link href="https://www.nermalcat69.com" className="flex space-x-2">
+      <Link href="/" className="flex space-x-2">
         <span className="text-xl text-gray-800 inline-block font-bold">
           {siteConfig.name}
         </span>

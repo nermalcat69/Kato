@@ -1,11 +1,11 @@
 export type SiteConfig = typeof siteConfig
 
 export const siteConfig = {
-  name: "Nermalcat69",
+  name: "Kato",
   description: "One Place for your algebra questions :)",
   mainNav: [
     {
-      title: "Kato",
+      title: "Playground",
       href: "/",
     },
   ],
