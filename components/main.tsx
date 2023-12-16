@@ -11,7 +11,7 @@ import User from "./globals/User"
 
 export function Main() {
   const [equation, userEquation] = useState("");
-  const [type, EquationType] = useState<EquationType>("Quadratic Equations");
+  const [type, setEquationType] = useState<EquationType>("Quadratic Equations");
   const {
     input,
     handleInputChange,
@@ -54,10 +54,6 @@ export function Main() {
                 Select the type of equation.
               </p>
             </div>
-            <div className="block">
-              <DropDown equation={equation} EquationType={EquationType} />
-            </div>
-
             {!isLoading && (
               <button
                 className="bg-gray-800 hover:bg-gray-900 text-gray-50 px-4 py-2 rounded-md mt-8 duration-200 font-medium sm:mt-10 hover:shadow-inner w-full"
