@@ -1,6 +1,6 @@
 import "@/styles/globals.css"
 import { Metadata } from "next"
-import { Analytics } from '@vercel/analytics/react';
+import { Analytics } from "@vercel/analytics/react"
 import { GeistSans } from "geist/font"
 
 import { siteConfig } from "@/config/site"
@@ -31,7 +31,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <html lang="en" className={GeistSans.className} suppressHydrationWarning>
       <head />
       <body className={cn("min-h-screen bg-background font-sans antialiased")}>
-                  <Header />
+        <Header />
 
         <div className="relative flex flex-col min-h-screen">
           <div className="flex-1">{children}</div>
