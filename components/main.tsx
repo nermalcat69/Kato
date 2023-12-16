@@ -27,7 +27,7 @@ export function Main() {
   };
 
   const lastMessage = messages[messages.length - 1];
-  const generatedArticles = lastMessage?.role === "assistant" ? lastMessage.content : null;
+  const generatedEquations = lastMessage?.role === "assistant" ? lastMessage.content : null;
   return (
     <section className="py-2">
       <div className="flex justify-center border border-gray-200 mt-8 p-6  rounded-md gap-6 my-4">
@@ -59,7 +59,7 @@ export function Main() {
                 className="bg-gray-800 hover:bg-gray-900 text-gray-50 px-4 py-2 rounded-md mt-8 duration-200 font-medium sm:mt-10 hover:shadow-inner w-full"
                 type="submit"
               >
-                Fix your Article &rarr;
+                Solve My Equation &rarr;
               </button>
             )}
             {isLoading && (
@@ -86,13 +86,13 @@ export function Main() {
               toastOptions={{ duration: 2000 }}
             />
             <output>
-              {generatedArticles && (
+              {generatedEquations && (
                 <div>
                   <div className="space-y-8 flex flex-col items-center justify-center max-w-xl mx-auto">
-                    {generatedArticles
-                      .substring(generatedArticles.indexOf("1") + 1)
+                    {generatedEquations
+                      .substring(generatedEquations.indexOf("1") + 1)
                       .split("1.")
-                      .map((generatedArticle) => {
+                      .map((generatedEquation) => {
                         return (
                           <div>
                             <div className="flex items-start space-x-4">
@@ -100,18 +100,18 @@ export function Main() {
                                 className="bg-zinc-50 border mr-16 max-w-[500px] block py-2 px-2 cursor-copy rounded-lg"
                                 onClick={() => {
                                   navigator.clipboard.writeText(
-                                    generatedArticle
+                                    generatedEquation
                                   )
                                   toast(
-                                    "Generated Article copied to clipboard",
+                                    "Generated Solution copied to clipboard",
                                     {
                                       icon: "✂️",
                                     }
                                   )
                                 }}
-                                key={generatedArticle}
+                                key={generatedEquations}
                               >
-                                <p>{generatedArticle}</p>
+                                <p>{generatedEquations}</p>
                               </div>
                             </div>
                           </div>
